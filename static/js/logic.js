@@ -1,5 +1,5 @@
 // Create the 'basemap' tile layer that will be the background of our map.
-let basemap = L.titleLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+let basemap = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
