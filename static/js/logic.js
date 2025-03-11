@@ -63,19 +63,18 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
   // This function determines the color of the marker based on the depth of the earthquake.
   function getColor(depth) {
     if (depth > 90) {
-      return '#FF0000'
+      return 'red'; // Updated to 'red'
     } else if (depth > 70) {
-      return '#FF7F00'
+      return 'orange'; // Updated to 'orange'
     } else if (depth > 50) {
-      return '#FFFF00'
+      return 'yellow'; // Updated to 'yellow'
     } else if (depth > 30) {
-      return '#7FFF00'
+      return 'limegreen'; // Updated to 'limegreen'
     } else if (depth > 10) {
-      return '#00FF00'
+      return 'lightgreen'; // Updated to 'lightgreen'
     } else {
-      return '#00FFFF'
+      return 'cyan'; // Updated to 'cyan'
     }
-
   }
 
   // This function determines the radius of the earthquake marker based on its magnitude.
