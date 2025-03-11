@@ -15,10 +15,10 @@ let baseMaps = {
 };
 
 // Create the map object with center and zoom options.
-let myMap = L.map("map-id", {
+let myMap = L.map("map", { // Change "map-id" to "map"
   center: [34.03, -118.15],
   zoom: 5,
-  layers: basemap  // Updated to 'basemap' instead of 'background'
+  layers: [basemap]  // Updated to 'basemap' instead of 'background'
 });
 
 
@@ -101,9 +101,9 @@ d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geoj
     }
   // OPTIONAL: Step 2
   // Add the data to the earthquake layer instead of directly to the map.
-  }).addTo(map);
+  }).addTo(earthquakes);
 
-  earthquakes.addTo(map);
+  earthquakes.addTo(myMap);
 
   // Create a legend control object.
   let legend = L.control({
