@@ -11,20 +11,19 @@ let street = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 let baseMaps = {
   "Street Map": street,
-  "Default Map": background
+  "Default Map": basemap  // Changed to 'basemap' instead of 'background'
 };
-
 
 // Create the map object with center and zoom options.
 let myMap = L.map("map-id", {
   center: [34.03, -118.15],
   zoom: 5,
-  layers: background
+  layers: basemap  // Updated to 'basemap' instead of 'background'
 });
 
 
 // Then add the 'basemap' tile layer to the map.
-background.addTo(myMap);
+basemap.addTo(myMap);
 street.addTo(myMap);
 
 
